@@ -33,8 +33,8 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.grid_item, parent, false);
         }
 
-        ImageView image = convertView.findViewById(R.id.profilePic);
-        TextView text = convertView.findViewById(R.id.profileText);
+        ImageView image = convertView.findViewById(R.id.galleryPic);
+        TextView text = convertView.findViewById(R.id.galleryName);
 
         Friend currentFriend = friends.get(position);
 
