@@ -27,12 +27,15 @@ public class ProfileActivity extends AppCompatActivity {
         float storedRating = prefs.getFloat(retrievedFriend.getName() + "rating", -1);
 
 
+        // Set the profile's name.
         TextView profileName = findViewById(R.id.profileName);
         profileName.setText(retrievedFriend.getName());
 
+        // Set the profile's picture.
         ImageView profilePic = findViewById(R.id.profilePic);
         profilePic.setImageResource(retrievedFriend.getDrawableId());
 
+        // Set the profile's biography.
         TextView profileText = findViewById(R.id.profileText);
         profileText.setText(retrievedFriend.getBio());
 
@@ -54,6 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
             SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
 
+            // Save the rating the user provided.
             editor.putFloat(retrievedFriend.getName() + "rating", rating);
             editor.apply();
 
