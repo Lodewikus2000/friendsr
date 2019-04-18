@@ -39,7 +39,7 @@ public class ProfileActivity extends AppCompatActivity {
         TextView profileText = findViewById(R.id.profileText);
         profileText.setText(retrievedFriend.getBio());
 
-
+        // Set the rating bar.
         RatingBar profileRating = findViewById(R.id.ratingBar);
         if (storedRating != -1) {
             profileRating.setRating(storedRating);
@@ -61,8 +61,7 @@ public class ProfileActivity extends AppCompatActivity {
             editor.putFloat(retrievedFriend.getName() + "rating", rating);
             editor.apply();
 
-            Log.d("rating", "we should have just saved a rating");
+            Log.d("rating", "we just saved a rating");
         }
     }
-
 }

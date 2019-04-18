@@ -23,7 +23,6 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
 
         this.friends = objects;
         this.resource = resource;
-
     }
 
 
@@ -33,16 +32,16 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.grid_item, parent, false);
         }
 
+        // Get the views for the image and text so we can fill them.
         ImageView image = convertView.findViewById(R.id.galleryPic);
         TextView text = convertView.findViewById(R.id.galleryName);
 
+        // Get the friend that we will use to fill the views with.
         Friend currentFriend = friends.get(position);
 
-        
-
+        // Give the grid item at position the correct picture and name.
         image.setImageResource(currentFriend.getDrawableId());
         text.setText(currentFriend.getName());
-
 
 
         return convertView;

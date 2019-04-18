@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Friend> friends = new ArrayList<>();
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
         FriendsAdapter adapter = new FriendsAdapter(this, R.layout.grid_item, friends);
 
-        GridView gridje = findViewById(R.id.mainGrid);
-        gridje.setAdapter(adapter);
+        GridView grid = findViewById(R.id.mainGrid);
+        grid.setAdapter(adapter);
 
 
         // Listener for clicks on the individual tiles in the grid.
@@ -66,14 +65,13 @@ public class MainActivity extends AppCompatActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
             Friend clickedFriend = (Friend) parent.getItemAtPosition(position);
-            Log.d("click", "we clicked in the grid!" + clickedFriend.getName());
+            Log.d("click", "user clicked on " + clickedFriend.getName());
 
             Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra("clicked_friend", clickedFriend);
             startActivity(intent);
         }
     }
-
 
 
     public void onSaveInstanceState(Bundle outState) {
@@ -83,5 +81,4 @@ public class MainActivity extends AppCompatActivity {
         outState.putSerializable("friends", friends);
 
     }
-
 }
