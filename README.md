@@ -11,10 +11,10 @@ The gallery of profiles.
 <img src="screenshot1.png" width="240" alt="image of a new game">
 
 
-A rated profile in landscape mode.
+A rated profile. If the bio is too long, you can just scroll down to read it all.
 
 <img src="screenshot2.png" width="480" alt="image of a new game">
 
-A rated profile in landscape mode.
+A rated profile in landscape mode. In this mode, you can scroll through the bio while the picture stays fixed.
 
 <img src="screenshot3.png" width="480" alt="image of a new game">
