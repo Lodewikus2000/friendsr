@@ -15,3 +15,6 @@ A rated profile in landscape mode.
 
 <img src="screenshot2.png" width="480" alt="image of a new game">
 
+A rated profile in landscape mode.
+
+<img src="screenshot3.png" width="480" alt="image of a new game">
